@@ -27,11 +27,12 @@ const client = new Client({
         args: [
             '--no-sandbox', 
             '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage', // Memory crash rokne ke liye sabse zaroori
+            '--disable-dev-shm-usage', 
             '--disable-accelerated-2d-canvas',
             '--no-first-run',
             '--no-zygote',
-            '--disable-gpu' // GPU disable karne se RAM bachegi
+            '--disable-gpu',
+            '--blink-settings=imagesEnabled=false' // 👈 YEH NAYI LINE ADD KARO (RAM BACHANE KE LIYE)
         ] 
     }
 });
